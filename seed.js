@@ -114,7 +114,7 @@ const artesMarciales = [
     "demandasFisicas": "Media-Alta",
     "tecnicas": ["Llaves articulares", "Proyecciones", "Patadas circulares", "Puntos de presión"],
     "filosofia": "Armonía de mente, cuerpo y espíritu",
-    "historia": "El hapkido es un arte marcial coreano que se centra en la defensa personal, destacando por sus técnicas de luxaciones, proyecciones y movimientos circulares. Su origen se remonta a Choi Yong Sul, quien regresó a Corea después de vivir en Japón y aprendió el Daito-ryu Aiki-jujutsu con Sokaku Takeda. Choi Yong Sul adaptó y combinó este estilo con técnicas de artes marciales coreanas, creando el Yu Kwon Sool, que más tarde se conocería como hapkido.",
+    "historia": "El hapkido es un arte marcial coreano que se centra en la defensa personal, destacando por sus técnicas de luxaciones, proyecciones y movimientos circulares. Su origen se remonta a Choi Yong Sul, quien regresó a Corea después de vivir en Japón y aprendió el Daito-ryu Aiki-jujutsu con Sokaku Takeda. Choi Yong Sul adaptó y combinó este estilo con técnicas de artes marciales coreanas, creando el Yu Kwon Sool, que más tarde se conocería como hapkido. \nOrígenes y Desarrollo:\nInfluencia Japonesa:\nEl hapkido tiene sus raíces en el Daito-ryu Aiki-jujutsu, un arte marcial japonés que Choi Yong Sul aprendió durante su estancia en Japón. \nAdaptación Coreana:\nA su regreso a Corea, Choi Yong Sul integró elementos de artes marciales coreanas nativas, como el Taekkyon, en su sistema de defensa personal. \nPrimeros Pasos:\nChoi Yong Sul comenzó a enseñar su arte en la década de 1940, inicialmente bajo el nombre de Yu Kwon Sool. \nConsolidación:\nEl nombre hapkido fue adoptado más tarde por sus estudiantes, quienes también desarrollaron diferentes estilos dentro del arte. \nExpansión:\nEl hapkido se extendió rápidamente por Corea y luego a nivel internacional, ganando popularidad como un sistema de defensa personal eficaz.",
     "imagenes": [],
     "videos": ["https://www.youtube.com/watch?v=jz5aIBE5NCw"]
   },
@@ -168,7 +168,7 @@ const artesMarciales = [
     "demandasFisicas": "Media-Alta",
     "tecnicas": ["Proyecciones", "Estrangulaciones", "Luxaciones", "Golpes"],
     "filosofia": "Arte suave que vence a la fuerza",
-    "historia": "El Jujutsu, como arte marcial y sistema de combate, tiene raíces antiguas en Japón. Se desarrolló como un método de combate cuerpo a cuerpo que priorizaba el uso de la fuerza y técnicas de sumisión en lugar de armas, adaptándose a diversas situaciones en el campo de batalla y evolucionando a través de diferentes escuelas o estilos (ryu).",
+    "historia": "El Jujutsu, como arte marcial y sistema de combate, tiene raíces antiguas en Japón. Se desarrolló como un método de combate cuerpo a cuerpo que priorizaba el uso de la fuerza y técnicas de sumisión en lugar de armas, adaptándose a diversas situaciones en el campo de batalla y evolucionando a través de diferentes escuelas o estilos (ryu). \nOrígenes y Evolución:\nPrimeros Desarrollos:\nEl Jujutsu tiene sus orígenes en el antiguo Japón, combinando técnicas de sumo y otras artes marciales utilizadas en el combate militar. \nPeriodo Nara (710-794 d.C.):\nSe considera que los inicios históricos del Jujutsu datan de este período, aunque sus formas más tempranas eran más rudimentarias. \nEscuelas y Estilos:\nA lo largo de la historia, surgieron diversas escuelas (ryu) de Jujutsu, cada una con sus propias técnicas y filosofías. Algunas de las más antiguas son el Shinden Fudo-ryu, el Takenouchi-ryu y el Kito-ryu. \nInfluencia en las Artes Marciales Modernas:\nEl Jujutsu influyó en el desarrollo de otras artes marciales japonesas, como el Judo y el Aikido, que surgieron como sistemas más depurados y orientados a la eficacia deportiva o filosófica.",
     "imagenes": [],
     "videos": []
   },
@@ -204,7 +204,7 @@ const artesMarciales = [
     "demandasFisicas": "Media-Alta",
     "tecnicas": ["Sinawali", "Desarmes", "Trapping", "Flujo continuo"],
     "filosofia": "Adaptabilidad y fluidez",
-    "historia": "El Kali tiene sus orígenes en las Filipinas, donde los indígenas lo desarrollaron como método de defensa personal, a menudo en respuesta a la invasión española. Originalmente, se practicaba con palos que simulaban armas blancas como cuchillos y espadas. El Kali se transmitió de generación en generación, adaptándose a las circunstancias y necesidades de la época.",
+    "historia": "Orígenes y Desarrollo:\nEl Kali tiene sus orígenes en las Filipinas, donde los indígenas lo desarrollaron como método de defensa personal, a menudo en respuesta a la invasión española. \nOriginalmente, se practicaba con palos que simulaban armas blancas como cuchillos y espadas. \nEl Kali se transmitió de generación en generación, adaptándose a las circunstancias y necesidades de la época. \nDurante la ocupación española y la posterior guerra filipino-estadounidense, el Kali se utilizó para resistir a los invasores y preservar la cultura filipina. \nEl nombre \"Kali\" proviene del vocablo tagalo que significa \"filo/espada\". \nEn diferentes regiones de Filipinas, el arte marcial se conocía como Arnis o Escrima, nombres que se derivan de \"arnés\" (espada larga) o de la forma en que se usaban las armas en combate. precoloniales.",
     "imagenes": [],
     "videos": []
   },
@@ -240,7 +240,7 @@ const artesMarciales = [
     "demandasFisicas": "Media-Alta",
     "tecnicas": ["Cortes", "Estocadas", "Pasos", "Gritos (kiai)"],
     "filosofia": "Más allá de las técnicas de combate, el kendo enfatiza valores como el respeto, la cortesía, la autodisciplina y la superación personal. Busca formar individuos íntegros a través de un entrenamiento riguroso.",
-    "historia": "El kendo, \"el camino de la espada\", es un arte marcial japonés moderno que evolucionó a partir del kenjutsu, la esgrima tradicional de los samuráis. Surgió a finales del siglo XIX, durante la era Meiji, cuando Japón se modernizaba rápidamente y los valores tradicionales estaban cambiando.",
+    "historia": "El kendo, \"el camino de la espada\", es un arte marcial japonés moderno que evolucionó a partir del kenjutsu, la esgrima tradicional de los samuráis. Surgió a finales del siglo XIX, durante la era Meiji, cuando Japón se modernizaba rápidamente y los valores tradicionales estaban cambiando. El kendo busca desarrollar habilidades físicas y mentales, así como el carácter y la disciplina del practicante. \nAquí hay algunos puntos clave sobre la historia del kendo:\nOrígenes en el kenjutsu:\nEl kendo tiene sus raíces en el kenjutsu, la esgrima samurái que utilizaba la katana. Las diferentes escuelas de kenjutsu desarrollaron técnicas y formas de combate únicas, pero todas compartían el objetivo de dominar el manejo de la espada. \nEvolución hacia el kendo:\nDurante el período Edo tardío y la era Meiji, se produjo una unificación de diferentes escuelas de kenjutsu, dando lugar al kendo moderno. Se introdujeron el shinai (espada de bambú) y el bogu (armadura protectora) para hacer el entrenamiento más seguro. \nDesarrollo y difusión:\nEn el siglo XX, el kendo fue adoptado como parte del currículo escolar y se estableció la Federación de Kendo de Japón para promover su práctica. Se crearon los kata (formas) unificados para preservar la esencia de las técnicas de espada.",
     "imagenes": [],
     "videos": []
   },
@@ -312,7 +312,7 @@ const artesMarciales = [
     "demandasFisicas": "Muy alta",
     "tecnicas": ["Patadas con espinilla", "Rodillazos", "Codazos", "Clinch"],
     "filosofia": "Honor, respeto y tradición tailandesa",
-    "historia": "Arte marcial tradicional tailandés conocido como 'El Arte de las Ocho Extremidades', desarrollado por guerreros siameses.",
+    "historia": "El judo es un arte marcial moderno japonés creado por Jigoro Kano en 1882. Se basa en el jujutsu, pero Kano lo modificó para hacerlo más accesible y menos brutal, enfocándose en la eficiencia técnica y el desarrollo personal. El judo no solo es un deporte de combate, sino también una filosofía que promueve valores como el respeto, la disciplina y el beneficio mutuo. \nOrígenes:\nJigoro Kano, a finales del siglo XIX, estudió diversas formas de jujutsu y desarrolló el judo como una disciplina más completa. \nKano fundó el primer Kodokan (escuela de judo) en 1882 en Tokio, marcando el inicio del judo moderno. \nEl judo se difundió internacionalmente a principios del siglo XX, llegando a Europa y otros continentes.",
     "imagenes": [],
     "videos": []
   },
