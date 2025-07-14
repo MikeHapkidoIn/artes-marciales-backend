@@ -43,7 +43,7 @@ const artesMarciales = [
     "tecnicas": ["Proyecciones circulares", "Inmovilizaciones", "Desarmes", "Respiración"],
     "filosofia": "Armonía y no-violencia",
     "historia": "El Aikido es un arte marcial japonés fundado por Morihei Ueshiba, conocido como O'Sensei, a principios del siglo XX. Se basa en las artes marciales tradicionales japonesas, como el Daito-ryu Aiki-jujutsu, y busca la armonía en lugar de la dominación o la destrucción. Ueshiba desarrolló el Aikido como una vía para unificar cuerpo y mente, buscando la unión en lugar del conflicto, y enfatizando la no violencia y el desarrollo personal.",
-    "imagenes": [],
+    "imagenes": ['https://res.cloudinary.com/dchedntcz/image/upload/v1752515967/wp2848931-aikido-hd-wallpaper_qzump0.jpg'],
     "videos": []
   },
   {
