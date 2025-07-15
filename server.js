@@ -13,34 +13,14 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// MongoDB Connection
+// Conexion mongodb
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://mangelveragomez:DarioDanae1721@cluster0.0qm2ev9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Arte Marcial Schema
-const arteMarcialSchema = new mongoose.Schema({
-  nombre: { type: String, required: true },
-  paisProcedencia: { type: String, required: true },
-  edadOrigen: { type: String, required: true },
-  tipo: { type: String, required: true },
-  distanciasTrabajadas: [String],
-  armas: [String],
-  tipoContacto: { type: String, required: true },
-  focus: { type: String, required: true },
-  fortalezas: [String],
-  debilidades: [String],
-  demandasFisicas: { type: String, required: true },
-  tecnicas: [String],
-  filosofia: { type: String, required: true },
-  historia: { type: String, required: true },
-  imagenes: [String],
-  videos: [String]
-}, {
-  timestamps: true
-});
+
 
 const ArteMarcial = mongoose.model('ArteMarcial', arteMarcialSchema);
 
@@ -51,7 +31,7 @@ app.get('/api/artes-marciales', async (req, res) => {
     const { search, tipo, paisProcedencia, tipoContacto, demandasFisicas } = req.query;
     let query = {};
 
-    // Apply filters
+    // Aplicar filtros
     if (search) {
       query.$or = [
         { nombre: { $regex: search, $options: 'i' } },
@@ -76,7 +56,7 @@ app.get('/api/artes-marciales', async (req, res) => {
   }
 });
 
-// Get single arte marcial
+
 app.get('/api/artes-marciales/:id', async (req, res) => {
   try {
     const arteMarcial = await ArteMarcial.findById(req.params.id);
@@ -89,7 +69,7 @@ app.get('/api/artes-marciales/:id', async (req, res) => {
   }
 });
 
-// Compare artes marciales
+// Comparar artes marciales
 app.post('/api/compare', async (req, res) => {
   try {
     const { ids } = req.body;
@@ -109,7 +89,7 @@ app.post('/api/compare', async (req, res) => {
   }
 });
 
-// Get filter options
+// Opciones de filtros
 app.get('/api/filters', async (req, res) => {
   try {
     const tipos = await ArteMarcial.distinct('tipo');
@@ -131,10 +111,10 @@ app.get('/api/filters', async (req, res) => {
   }
 });
 
-// Seed route for production (TEMPORAL) - CON LAS 24 ARTES MARCIALES
+
 app.get('/seed', async (req, res) => {
   try {
-    // Array completo de las 24 artes marciales
+    // objeto con las artes marciales
     const artesMarciales = [
       {
         "nombre": "Aikido",
@@ -552,11 +532,11 @@ app.get('/seed', async (req, res) => {
       }
     ];
 
-    // Clear existing data
+    //borrar datos
     await ArteMarcial.deleteMany({});
     console.log('Cleared existing data');
 
-    // Insert new data
+    
     const result = await ArteMarcial.insertMany(artesMarciales);
     console.log(`Inserted ${result.length} artes marciales`);
 
@@ -571,7 +551,7 @@ app.get('/seed', async (req, res) => {
   }
 });
 
-// Health check
+
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });

@@ -78,7 +78,7 @@ const artesMarciales = [
     "demandasFisicas": "Alta",
     "tecnicas": ["Guardias", "Sumisiones", "Transiciones", "Escapes"],
     "filosofia": "Técnica, timing y apalancamiento",
-    "historia": "Orígenes Japoneses:\nEl Jiu-Jitsu, cuyo significado es \"arte suave\", se desarrolló en Japón durante el periodo feudal, utilizado por los samuráis para combate cuerpo a cuerpo, especialmente cuando estaban desarmados. \nLlegada a Brasil:\nMitsuyo Maeda, un experto judoka, emigró a Brasil y enseñó sus conocimientos a la familia Gracie, quienes vieron el potencial de estas técnicas. \nAdaptación y Desarrollo:\nCarlos y Helio Gracie, con la ayuda de sus hermanos, transformaron el Jiu-Jitsu japonés, enfatizando técnicas de suelo y adaptándolas a sus propias características físicas, creando así el BJJ.",
+    "historia": "Orígenes Japoneses: El Jiu-Jitsu, cuyo significado es \"arte suave\", se desarrolló en Japón durante el periodo feudal, utilizado por los samuráis para combate cuerpo a cuerpo, especialmente cuando estaban desarmados. \nLlegada a Brasil:\nMitsuyo Maeda, un experto judoka, emigró a Brasil y enseñó sus conocimientos a la familia Gracie, quienes vieron el potencial de estas técnicas. \nAdaptación y Desarrollo:\nCarlos y Helio Gracie, con la ayuda de sus hermanos, transformaron el Jiu-Jitsu japonés, enfatizando técnicas de suelo y adaptándolas a sus propias características físicas, creando así el BJJ.",
     "imagenes": [],
     "videos": []
   },
@@ -110,13 +110,13 @@ const artesMarciales = [
     "tipoContacto": "Contacto completo",
     "focus": "Defensa personal",
     "fortalezas": ["Técnicas de palanca", "Flexibilidad", "Control del oponente", "Luxaciones", "Combate en suelo", "Golpes de mano", "Multiples patadas"],
-    "debilidades": ["Requiere mucha práctica", "Complejo para principiantes"],
+    "debilidades": ["Requiere mucha práctica", "Complejo para principiantes", "Multiples escuelas sin unificacion entre estilos"],
     "demandasFisicas": "Media-Alta",
     "tecnicas": ["Llaves articulares", "Proyecciones", "Patadas circulares", "Puntos de presión"],
     "filosofia": "Armonía de mente, cuerpo y espíritu",
     "historia": "El hapkido es un arte marcial coreano que se centra en la defensa personal, destacando por sus técnicas de luxaciones, proyecciones y movimientos circulares. Su origen se remonta a Choi Yong Sul, quien regresó a Corea después de vivir en Japón y aprendió el Daito-ryu Aiki-jujutsu con Sokaku Takeda. Choi Yong Sul adaptó y combinó este estilo con técnicas de artes marciales coreanas, creando el Yu Kwon Sool, que más tarde se conocería como hapkido. \nOrígenes y Desarrollo:\nInfluencia Japonesa:\nEl hapkido tiene sus raíces en el Daito-ryu Aiki-jujutsu, un arte marcial japonés que Choi Yong Sul aprendió durante su estancia en Japón. \nAdaptación Coreana:\nA su regreso a Corea, Choi Yong Sul integró elementos de artes marciales coreanas nativas, como el Taekkyon, en su sistema de defensa personal. \nPrimeros Pasos:\nChoi Yong Sul comenzó a enseñar su arte en la década de 1940, inicialmente bajo el nombre de Yu Kwon Sool. \nConsolidación:\nEl nombre hapkido fue adoptado más tarde por sus estudiantes, quienes también desarrollaron diferentes estilos dentro del arte. \nExpansión:\nEl hapkido se extendió rápidamente por Corea y luego a nivel internacional, ganando popularidad como un sistema de defensa personal eficaz.",
     "imagenes": [],
-    "videos": ["https://www.youtube.com/watch?v=jz5aIBE5NCw"]
+    "videos": ["https://www.youtube.com/watch?v=jz5aIBE5NCw&t=73s"]
   },
   {
     "nombre": "Iaido",
@@ -272,7 +272,7 @@ const artesMarciales = [
     "tipoContacto": "Semi-contacto",
     "focus": "Arte marcial completo",
     "fortalezas": ["Técnicas diversas", "Armas tradicionales", "Acrobacia"],
-    "debilidades": ["Muy extenso", "Requiere años de estudio"],
+    "debilidades": ["Muy extenso", "Requiere años de estudio", "Algunas escuelas otorgan nuevos grados según el desembolso monetario del alumno"],
     "demandasFisicas": "Alta",
     "tecnicas": ["Técnicas de mano", "Patadas", "Llaves", "Armas tradicionales"],
     "filosofia": "Preservación de artes marciales coreanas tradicionales",
