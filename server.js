@@ -51,7 +51,7 @@ app.get('/api/artes-marciales', async (req, res) => {
     const { search, tipo, paisProcedencia, tipoContacto, demandasFisicas } = req.query;
     let query = {};
 
-    // Aplicar filtros
+    // Apply filters
     if (search) {
       query.$or = [
         { nombre: { $regex: search, $options: 'i' } },
@@ -76,7 +76,7 @@ app.get('/api/artes-marciales', async (req, res) => {
   }
 });
 
-
+// Get single arte marcial
 app.get('/api/artes-marciales/:id', async (req, res) => {
   try {
     const arteMarcial = await ArteMarcial.findById(req.params.id);
@@ -89,7 +89,7 @@ app.get('/api/artes-marciales/:id', async (req, res) => {
   }
 });
 
-// Comparar artes marciales
+// Compare artes marciales
 app.post('/api/compare', async (req, res) => {
   try {
     const { ids } = req.body;
@@ -109,7 +109,7 @@ app.post('/api/compare', async (req, res) => {
   }
 });
 
-// Opciones de filtros
+// Get filter options
 app.get('/api/filters', async (req, res) => {
   try {
     const tipos = await ArteMarcial.distinct('tipo');
@@ -131,10 +131,10 @@ app.get('/api/filters', async (req, res) => {
   }
 });
 
-
+// Seed route for production (TEMPORAL) - CON LAS 24 ARTES MARCIALES
 app.get('/seed', async (req, res) => {
   try {
-    // objeto con las artes marciales
+    // Array completo de las 24 artes marciales
     const artesMarciales = [
       {
         "nombre": "Aikido",
