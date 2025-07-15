@@ -13,14 +13,34 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Conexion mongodb
+// MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://mangelveragomez:DarioDanae1721@cluster0.0qm2ev9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-
+// Arte Marcial Schema
+const arteMarcialSchema = new mongoose.Schema({
+  nombre: { type: String, required: true },
+  paisProcedencia: { type: String, required: true },
+  edadOrigen: { type: String, required: true },
+  tipo: { type: String, required: true },
+  distanciasTrabajadas: [String],
+  armas: [String],
+  tipoContacto: { type: String, required: true },
+  focus: { type: String, required: true },
+  fortalezas: [String],
+  debilidades: [String],
+  demandasFisicas: { type: String, required: true },
+  tecnicas: [String],
+  filosofia: { type: String, required: true },
+  historia: { type: String, required: true },
+  imagenes: [String],
+  videos: [String]
+}, {
+  timestamps: true
+});
 
 const ArteMarcial = mongoose.model('ArteMarcial', arteMarcialSchema);
 
@@ -532,11 +552,11 @@ app.get('/seed', async (req, res) => {
       }
     ];
 
-    //borrar datos
+    // Clear existing data
     await ArteMarcial.deleteMany({});
     console.log('Cleared existing data');
 
-    
+    // Insert new data
     const result = await ArteMarcial.insertMany(artesMarciales);
     console.log(`Inserted ${result.length} artes marciales`);
 
@@ -551,7 +571,7 @@ app.get('/seed', async (req, res) => {
   }
 });
 
-
+// Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
