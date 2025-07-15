@@ -44,6 +44,59 @@ const arteMarcialSchema = new mongoose.Schema({
 
 const ArteMarcial = mongoose.model('ArteMarcial', arteMarcialSchema);
 
+// Importar y configurar las rutas modulares
+const { router: artesMarcialesRouter, initModel } = require('./routes/artesMarciales');
+
+// Inicializar el modelo en las rutas
+initModel(ArteMarcial);
+
+// Usar las rutas modulares
+app.use('/api/artes-marciales', artesMarcialesRouter);
+
+// Routes que no se movieron (mantener las existentes)
+
+// Compare artes marciales
+app.post('/api/compare', async (req, res) => {
+  try {
+    const { ids } = req.body;
+    if (!ids || ids.length < 2) {
+      return res.status(400).json({ success: false, error: 'Need at least 2 IDs to compare' });
+    }
+
+    const artesMarciales = await ArteMarcial.find({ _id: { $in: ids } });
+    
+    if (artesMarciales.length !== ids.length) {
+      return res.status(404).json({ success: false, error: 'One or more artes marciales not found' });
+    }
+
+    res.json({ success: true, data: artesMarciales });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Get filter options
+app.get('/api/filters', async (req, res) => {
+  try {
+    const tipos = await ArteMarcial.distinct('tipo');
+    const paises = await ArteMarcial.distinct('paisProcedencia');
+    const tiposContacto = await ArteMarcial.distinct('tipoContacto');
+    const demandasFisicas = await ArteMarcial.distinct('demandasFisicas');
+
+    res.json({
+      success: true,
+      data: {
+        tipos,
+        paises,
+        tiposContacto,
+        demandasFisicas
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 // Routes
 // Get all artes marciales
 app.get('/api/artes-marciales', async (req, res) => {
@@ -552,7 +605,7 @@ app.get('/seed', async (req, res) => {
       }
     ];
 
-    // Clear existing data
+   // Clear existing data
     await ArteMarcial.deleteMany({});
     console.log('Cleared existing data');
 
