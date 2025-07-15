@@ -36,7 +36,7 @@ const arteMarcialSchema = new mongoose.Schema({
   tecnicas: [String],
   filosofia: { type: String, required: true },
   historia: { type: String, required: true },
-  imagenes: [String],
+  imagenes: [],
   videos: [String]
 }, {
   timestamps: true
