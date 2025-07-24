@@ -5,18 +5,18 @@ const router = express.Router();
 // Importar el modelo (se pasará desde server.js)
 let ArteMarcial;
 
-// Función para inicializar el modelo
+// Función para iniciar el modelo
 const initModel = (model) => {
   ArteMarcial = model;
 };
 
-// GET all artes marciales con filtros
+// obtiene artes marciales con filtros
 router.get('/', async (req, res) => {
   try {
     const { search, tipo, paisProcedencia, tipoContacto, demandasFisicas } = req.query;
     let query = {};
 
-    // Apply filters
+    // aplicar filtros
     if (search) {
       query.$or = [
         { nombre: { $regex: search, $options: 'i' } },
@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET single arte marcial
+// obtiene un arte marcial
 router.get('/:id', async (req, res) => {
   try {
     const arteMarcial = await ArteMarcial.findById(req.params.id);
@@ -57,7 +57,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// CREATE - Add new arte marcial
+// CREATE - agrega nuevo arte marcial
 router.post('/', async (req, res) => {
   try {
     const {
@@ -79,7 +79,7 @@ router.post('/', async (req, res) => {
       videos
     } = req.body;
 
-    // Validate required fields
+    // Validacion
     if (!nombre || !paisProcedencia || !edadOrigen || !tipo || !tipoContacto || !focus || !demandasFisicas || !filosofia || !historia) {
       return res.status(400).json({
         success: false,
@@ -87,7 +87,7 @@ router.post('/', async (req, res) => {
       });
     }
 
-    // Check if arte marcial already exists
+    // Check si el arte marcial existe
     const existingArte = await ArteMarcial.findOne({ nombre: { $regex: new RegExp(`^${nombre}$`, 'i') } });
     if (existingArte) {
       return res.status(400).json({
@@ -140,13 +140,13 @@ router.post('/', async (req, res) => {
   }
 });
 
-// UPDATE - Update existing arte marcial
+// UPDATE 
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const updateData = req.body;
 
-    // Check if arte marcial exists
+    // Check si el arte marcial existe
     const existingArteMarcial = await ArteMarcial.findById(id);
     if (!existingArteMarcial) {
       return res.status(404).json({
@@ -155,7 +155,7 @@ router.put('/:id', async (req, res) => {
       });
     }
 
-    // If updating name, check for duplicates
+    
     if (updateData.nombre && updateData.nombre !== existingArteMarcial.nombre) {
       const duplicateArte = await ArteMarcial.findOne({
         nombre: { $regex: new RegExp(`^${updateData.nombre}$`, 'i') },
@@ -170,13 +170,13 @@ router.put('/:id', async (req, res) => {
       }
     }
 
-    // Update the arte marcial
+    // Update arte marcial
     const updatedArteMarcial = await ArteMarcial.findByIdAndUpdate(
       id,
       { $set: updateData },
       { 
-        new: true, // Return the updated document
-        runValidators: true // Run schema validations
+        new: true, 
+        runValidators: true 
       }
     );
 

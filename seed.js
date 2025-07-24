@@ -4,6 +4,7 @@ require('dotenv').config();
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://mangelveragomez:DarioDanae1721@cluster0.0qm2ev9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // Arte Marcial Schema
+
 const arteMarcialSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
   paisProcedencia: { type: String, required: true },
@@ -60,7 +61,7 @@ const artesMarciales = [
     "demandasFisicas": "Alta",
     "tecnicas": ["Jab", "Cross", "Ganchos", "Uppercuts", "Esquivas"],
     "filosofia": "Ciencia dulce y noble arte",
-    "historia": "El boxeo tiene raíces antiguas, remontándose al Antiguo Egipto y Grecia, donde se practicaba como un deporte de combate. En la antigua Grecia, se incorporó a los Juegos Olímpicos en el 688 a.C. Tras un declive, resurgió en Inglaterra en el siglo XVIII como \"prizefighting\", combates a puño limpio con apuestas. Las reglas de Queensberry, que introdujeron los guantes y asaltos regulados, se formalizaron en 1867, dando forma al boxeo moderno.",
+    "historia": "El boxeo es un deporte de combate con una larga historia, remontándose a la antigüedad. Se originó en África y se extendió a otras civilizaciones como Egipto, Mesopotamia, Grecia y Roma. En la antigua Grecia, el boxeo fue incluido en los Juegos Olímpicos. A lo largo de los siglos, el boxeo evolucionó, con cambios notables en las reglas y la forma de combate, especialmente con la introducción de los guantes en el siglo XIX.",
     "imagenes": [],
     "videos": []
   },
@@ -78,7 +79,7 @@ const artesMarciales = [
     "demandasFisicas": "Alta",
     "tecnicas": ["Guardias", "Sumisiones", "Transiciones", "Escapes"],
     "filosofia": "Técnica, timing y apalancamiento",
-    "historia": "Orígenes Japoneses: El Jiu-Jitsu, cuyo significado es \"arte suave\", se desarrolló en Japón durante el periodo feudal, utilizado por los samuráis para combate cuerpo a cuerpo, especialmente cuando estaban desarmados. \nLlegada a Brasil:\nMitsuyo Maeda, un experto judoka, emigró a Brasil y enseñó sus conocimientos a la familia Gracie, quienes vieron el potencial de estas técnicas. \nAdaptación y Desarrollo:\nCarlos y Helio Gracie, con la ayuda de sus hermanos, transformaron el Jiu-Jitsu japonés, enfatizando técnicas de suelo y adaptándolas a sus propias características físicas, creando así el BJJ.",
+    "historia": "El Brazilian Jiu Jitsu (BJJ) tiene sus raíces en el Jiu-Jitsu japonés, específicamente en el Judo, que fue introducido a Brasil a principios del siglo XX por Mitsuyo Maeda. La familia Gracie, en particular Carlos y Helio, adaptó y refinó estas técnicas, enfocándose en combates reales y situaciones de suelo, dando origen al BJJ tal como lo conocemos hoy.",
     "imagenes": [],
     "videos": []
   },
@@ -272,7 +273,7 @@ const artesMarciales = [
     "tipoContacto": "Semi-contacto",
     "focus": "Arte marcial completo",
     "fortalezas": ["Técnicas diversas", "Armas tradicionales", "Acrobacia"],
-    "debilidades": ["Muy extenso", "Requiere años de estudio", "Algunas escuelas otorgan nuevos grados según el desembolso monetario del alumno"],
+    "debilidades": ["Muy extenso", "Requiere años de estudio", "Sistema piramidal a traves de diferentes asociaciones", "Se obtienen cinturones segun la economia del alumno"],
     "demandasFisicas": "Alta",
     "tecnicas": ["Técnicas de mano", "Patadas", "Llaves", "Armas tradicionales"],
     "filosofia": "Preservación de artes marciales coreanas tradicionales",
@@ -449,11 +450,11 @@ async function seedDatabase() {
     await mongoose.connect(MONGODB_URI);
     console.log('Connected to MongoDB');
 
-    // Clear existing data
+    // eliminar datos
     await ArteMarcial.deleteMany({});
     console.log('Cleared existing data');
 
-    // Insert new data
+    // agregar nuevos datos
     const result = await ArteMarcial.insertMany(artesMarciales);
     console.log(`Inserted ${result.length} artes marciales`);
 
